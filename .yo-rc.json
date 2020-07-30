@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "ManagerReporting",
+    "namespace": "de.mindsquare.hr",
+    "platform": "SAP NetWeaver",
+    "viewtype": "XML",
+    "viewname": "Main",
+    "ui5libs": "Local resources (SAPUI5)",
+    "newdir": false,
+    "namespaceURI": "de/mindsquare/hr",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

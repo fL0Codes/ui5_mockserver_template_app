@@ -1,0 +1,40 @@
+{
+  "name": "ManagerReporting",
+  "version": "0.0.1",
+  "description": "Manager Reporting App for SRH",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-s lint karma",
+    "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
+    "build:ui": "run-s  build:uimodule",
+    "karma-ci": "karma start karma-ci.conf.js",
+    "clearCoverage": "shx rm -rf coverage",
+    "karma": "run-s clearCoverage karma-ci",
+    "lint": "eslint .",
+    "deploy": "run-s build:ui",
+    "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
+    "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --a --dest dist/uimodule"
+  },
+  "author": "Florian Albrecht (mindsquare AG)",
+  "license": "ISC",
+  "devDependencies": {
+    "shx": "^0.3.2",
+    "@ui5/cli": "^2.2.5",
+    "ui5-middleware-livereload": "^0.3.0",
+    "karma": "^5.0.9",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.2",
+    "karma-ui5": "^2.1.2",
+    "npm-run-all": "^4.1.5",
+    "eslint": "^7.1.0",
+    "ui5-task-nwabap-deployer": "*",
+    "ui5-middleware-route-proxy": "*"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-livereload",
+      "ui5-task-nwabap-deployer",
+      "ui5-middleware-route-proxy"
+    ]
+  }
+}

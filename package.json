@@ -1,7 +1,7 @@
 {
-  "name": "ManagerReporting",
+  "name": "sapui5appmocktemplate",
   "version": "0.0.1",
-  "description": "Manager Reporting App for SRH",
+  "description": "SAPUI5 App Template with Mock Support",
   "main": "index.js",
   "scripts": {
     "test": "run-s lint karma",
@@ -19,7 +19,6 @@
   "author": "Florian Albrecht (mindsquare AG)",
   "license": "ISC",
   "devDependencies": {
-    "@types/sapui5": "^1.40.1",
     "@ui5/cli": "^2.2.5",
     "eslint": "^7.1.0",
     "karma": "^5.0.9",

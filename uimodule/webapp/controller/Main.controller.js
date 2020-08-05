@@ -1,7 +1,5 @@
-sap.ui.define([
-  "sap/ui/core/mvc/Controller"
-], function(Controller) {
+sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
   "use strict";
 
-  return Controller.extend("de.mindsquare.hr.ManagerReporting.controller.Main", {});
+  return Controller.extend("flo.codes.template.MockServer.controller.Main", {});
 });

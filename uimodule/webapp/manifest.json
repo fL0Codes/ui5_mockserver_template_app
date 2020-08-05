@@ -1,14 +1,23 @@
 {
   "_version": "1.12.0",
   "sap.app": {
-    "id": "de.mindsquare.hr.ManagerReporting",
+    "id": "flo.codes.template.MockServer",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
       "version": "1.0.0"
     },
     "title": "{{appTitle}}",
-    "description": "{{appDescription}}"
+    "description": "{{appDescription}}",
+    "dataSources": {
+      "mainService": {
+        "uri": "/",
+        "type": "OData",
+        "settings": {
+          "localUri": "localService/metadata.xml"
+        }
+      }
+    }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -28,7 +37,7 @@
   },
   "sap.ui5": {
     "rootView": {
-      "viewName": "de.mindsquare.hr.ManagerReporting.view.Main",
+      "viewName": "flo.codes.template.MockServer.view.Main",
       "type": "XML",
       "async": true,
       "id": "idAppControl"
@@ -49,7 +58,16 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "de.mindsquare.hr.ManagerReporting.i18n.i18n"
+          "bundleName": "flo.codes.template.MockServer.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": false
         }
       }
     },
@@ -64,7 +82,7 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "de.mindsquare.hr.ManagerReporting.view",
+        "viewPath": "flo.codes.template.MockServer.view",
         "controlId": "idAppControl",
         "controlAggregation": "pages",
         "async": true
@@ -73,9 +91,7 @@
         {
           "name": "RouteMain",
           "pattern": "RouteMain",
-          "target": [
-            "TargetMain"
-          ]
+          "target": ["TargetMain"]
         }
       ],
       "targets": {

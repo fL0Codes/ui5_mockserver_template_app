@@ -1,11 +1,31 @@
- <mvc:View controllerName="de.mindsquare.hr.ManagerReporting.controller.Main"
+ <mvc:View controllerName="flo.codes.template.MockServer.controller.Main"
   displayBlock="true"
   xmlns="sap.m"
-  xmlns:mvc="sap.ui.core.mvc">
-  <App id="idAppControl" >
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:smartTable="sap.ui.comp.smarttable" >
+  <App id="idAppControl">
     <pages>
       <Page title="{i18n>title}">
-        <content></content>
+        <content>
+            <!-- Here goes the data from mock server -->
+            <List id="list" items="{/Meetups}" noDataText="{i18n>noDataText}">
+              <items>
+                <ObjectListItem
+                  number="{
+                    path: 'EventDate',
+                    type: 'sap.ui.model.type.DateTime',
+                    formatOptions: {
+                      style: 'medium'
+                    }
+                  }"
+                  title="{Title}">
+                  <attributes>
+                    <ObjectAttribute text="{Description}"/>
+                  </attributes>
+                </ObjectListItem>
+              </items>
+				    </List>
+        </content>
       </Page>
     </pages>
   </App>

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "run-s lint karma",
+    "build": "ui5 build",
     "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
     "start-test": "ui5 serve --config=uimodule/ui5.yaml --open /test/mockServer.html",
     "build:ui": "run-s  build:uimodule",
@@ -29,7 +30,12 @@
     "shx": "^0.3.2",
     "ui5-middleware-livereload": "^0.3.0",
     "ui5-middleware-route-proxy": "*",
-    "ui5-task-nwabap-deployer": "*"
+    "ui5-task-nwabap-deployer": "*",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@ui5/logger": "^1.0.0"
   },
   "ui5": {
     "dependencies": [

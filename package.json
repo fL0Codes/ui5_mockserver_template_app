@@ -8,7 +8,6 @@
     "build": "ui5 build",
     "start": "ui5 serve --config=uimodule/ui5.yaml  --open index.html",
     "start-test": "ui5 serve --config=uimodule/ui5.yaml --open /test/mockServer.html",
-    "build:ui": "run-s  build:uimodule",
     "karma-ci": "karma start karma-ci.conf.js",
     "clearCoverage": "shx rm -rf coverage",
     "karma": "run-s clearCoverage karma-ci",
